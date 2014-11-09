@@ -1,0 +1,28 @@
+<h1>Yo, yo, yo, let's get chattin'!</h1>
+<h3>{{controllerTest}}</h3>
+
+
+<label>Username</label>
+<input type="text" ng-model="$storage.userName" placeholder="Username">
+<!-- <button ng-click="addUser(userName)">Set Username</button> -->
+
+<hr />
+
+<label>New Forum</label>
+<input type="text" ng-model="forumName" placeholder="Forum name...">
+<button ng-click="addForum(forumName)">Add Forum</button>
+
+<hr />
+
+<div>
+<img src="http://img2.wikia.nocookie.net/__cb20140823183807/survivor-org/images/0/02/Keep-calm-and-say-something-random-flying-rat.png" width="25%">
+</div>
+
+<ul>
+	<li ng-repeat="forum in forums">
+		<a ui-sref="forum({key: forum.$id})">{{forum.name}}</a>
+		<a href="#/" ng-click="removeForum(forum)">Remove</a>
+	</li>
+</ul>
+
+
